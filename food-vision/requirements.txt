@@ -1,0 +1,5 @@
+requests
+tensorflow
+streamlit
+google_api_python_client
+protobuf

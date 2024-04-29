@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: efficientnet-model-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: efficientnet-model
+  template:
+    metadata:
+      labels:
+        app: efficientnet-model
+    spec:
+      containers:
+      - name: efficientnet-model
+        image: my-app_streamlit
+        ports:
+        - containerPort: 8501
